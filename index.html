@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeonBeats - Music Player</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-blur" id="backgroundBlur"></div>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <h1 class="navbar-title">Personalized Music Player</h1>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="music-player" id="musicPlayer">
+            <div class="player-header">
+                <h1 class="app-title">NeonBeats</h1>
+                <div class="theme-toggle" id="themeToggle">
+                    <span class="theme-icon">🌙</span>
+                </div>
+            </div>
+
+            <div class="album-art-container">
+                <div class="album-art" id="albumArt">
+                    <img src="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Album Art" id="albumImage">
+                    <div class="play-overlay" id="playOverlay">
+                        <div class="play-icon">▶</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="song-info">
+                <h2 class="song-title" id="songTitle">Neon Dreams</h2>
+                <p class="artist-name" id="artistName">Synthwave Artist</p>
+            </div>
+
+            <div class="progress-container">
+                <div class="time-info">
+                    <span class="current-time" id="currentTime">0:00</span>
+                    <span class="total-time" id="totalTime">3:45</span>
+                </div>
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress-fill" id="progressFill"></div>
+                    <div class="progress-thumb" id="progressThumb"></div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="control-btn shuffle-btn" id="shuffleBtn">
+                    <span class="btn-icon">🔀</span>
+                </button>
+                <button class="control-btn prev-btn" id="prevBtn">
+                    <span class="btn-icon">⏮</span>
+                </button>
+                <button class="control-btn play-btn" id="playBtn">
+                    <span class="btn-icon" id="playIcon">▶</span>
+                </button>
+                <button class="control-btn next-btn" id="nextBtn">
+                    <span class="btn-icon">⏭</span>
+                </button>
+                <button class="control-btn repeat-btn" id="repeatBtn">
+                    <span class="btn-icon">🔁</span>
+                </button>
+            </div>
+
+            <div class="volume-container">
+                <div class="volume-icon">🔊</div>
+                <div class="volume-bar">
+                    <div class="volume-fill" id="volumeFill"></div>
+                    <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="80">
+                </div>
+            </div>
+
+            <div class="playlist-toggle" id="playlistToggle">
+                <span class="playlist-icon">📝</span>
+                <span class="playlist-text">Playlist</span>
+            </div>
+        </div>
+
+        <div class="playlist" id="playlist">
+            <h3 class="playlist-title">Now Playing</h3>
+            <div class="playlist-items" id="playlistItems">
+                <!-- Playlist items will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <audio id="audioPlayer" preload="metadata"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
