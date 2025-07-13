@@ -42,7 +42,8 @@ class MusicPlayer {
         albumArt: "https://raw.githubusercontent.com/amit-kumar-11/Music-Player/main/images/tere%20bin.jpg
 ",
         audioUrl:
-          "https://raw.githubusercontent.com/amit-kumar-11/Music-Player/main/songs/Mere%20Nishaan%20-%20OMG%20Oh%20My%20God!%20320%20Kbps.mp3",
+          "https://raw.githubusercontent.com/amit-kumar-11/Music-Player/main/songs/tere%20bina.mp3
+",
       }
     ];
 
